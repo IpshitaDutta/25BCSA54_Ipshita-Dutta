@@ -1,0 +1,21 @@
+package com.thirdprog;
+import java.util.Scanner;
+public class atmstim {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n;
+	System.out.println("Enter a pin");
+	n=sc.nextInt();
+	int m;
+	System.out.println("Enter your pin");
+	m=sc.nextInt();
+	while(m!=n)
+	{
+		System.out.println("You entered wrong pin");
+		System.out.println("Enter your pin");
+		m=sc.nextInt();	
+	}
+    System.out.println("Correct pin="+m);
+	}
+
+}
