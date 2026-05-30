@@ -1,0 +1,25 @@
+package com.fifthprogram;
+import java.util.Scanner;
+public class shopd {
+double d(int b,double bd)
+{
+	return(b-(bd*b/100.0));
+}//Function to return discounted amount
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter bill amount");
+		int n;
+		n=sc.nextInt();
+		System.out.println("Enter discount percent");
+		double x;
+		x=sc.nextDouble();
+		shopd ob=new shopd();
+		double m=0.0;
+		 m=ob.d(n,x);
+		System.out.println("Enter discounted amount="+m);
+		
+		
+
+	}
+
+}
