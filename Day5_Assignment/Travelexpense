@@ -1,0 +1,25 @@
+package com.fifthprogram;
+import java.util.Scanner;
+public class TravelE {
+double tr(double x,double y,double z)
+{
+	double p=x/y;
+	return(p*z);
+	
+}//Function to calculate cost of petroleum needed
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		double a,b,c;System.out.println("Enter distance travelled in kms");
+		a=sc.nextDouble();double d=0.0;
+		System.out.println("Enter mileage of vehicle in km/L");
+		b=sc.nextDouble();
+		System.out.println("Enter price of petrol per litre ");
+		c=sc.nextDouble();
+		TravelE ob=new TravelE();
+		d=ob.tr(a,b,c);
+		System.out.println("Cost of petrol="+d);
+		
+
+	}
+
+}
