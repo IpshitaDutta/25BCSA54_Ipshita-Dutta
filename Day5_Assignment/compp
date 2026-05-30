@@ -1,0 +1,25 @@
+package com.fifthprogram;
+import java.util.Scanner;
+public class compp {
+void res(int a,int b)
+{
+	if(a>b)
+		System.out.println("Player A wins");
+	else if(b>a)
+		System.out.println("Player B wins");
+	else
+		System.out.println("Draw");
+		
+}//Function to display the result of match
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+				int x,y;
+				System.out.println("Enter match scores of player A and B");
+				x=sc.nextInt();
+				y=sc.nextInt();
+				compp ob=new compp();
+				ob.res(x,y);
+
+	}
+
+}
