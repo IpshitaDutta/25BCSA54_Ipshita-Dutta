@@ -1,0 +1,26 @@
+package com.fifthprogram;
+import java.util.Scanner;
+public class sge {
+void df(int m)
+{
+	if(m>=90)
+		System.out.println("A grade");
+	else if(m>=80&&m<90)
+		System.out.println("B grade");
+	else if(m>=70&&m<80)
+		System.out.println("C grade");
+	else
+		System.out.println("Fail");
+		
+}//Function to print grade
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int g;
+		System.out.println("Enter marks of a student");
+		g=sc.nextInt();
+		sge ob=new sge();
+		ob.df(g);
+
+	}
+
+}
