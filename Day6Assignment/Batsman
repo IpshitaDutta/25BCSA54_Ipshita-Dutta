@@ -1,0 +1,33 @@
+package com.sixthprog;
+import java.util.Scanner;
+public class Batsman {
+String playername;
+int runs,balls;double strikeRate;
+Batsman(String g,int a,int b)
+{
+	playername=g;
+	runs=a;
+	balls=b;
+	strikeRate=(runs*100.0/balls);
+}
+void display()
+{
+	System.out.println("Strike rate="+strikeRate);
+}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter name of player");
+		String name;
+		name=sc.nextLine();
+		System.out.println("Enter runs of player");
+		int r;
+		r=sc.nextInt();
+		System.out.println("Enter balls of player");
+		int b;
+		b=sc.nextInt();
+		Batsman ob=new Batsman(name,r,b);
+		ob.display();
+
+	}
+
+}
