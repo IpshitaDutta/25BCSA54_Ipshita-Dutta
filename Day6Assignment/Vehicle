@@ -1,0 +1,42 @@
+package com.sixthprog;
+import java.util.*;
+public class Vehicle {
+String vehiclenumber;
+int hp;
+String vehtp;
+double pf;
+Vehicle(String vehiclenumber,int hp,String vehtp)
+{
+	this.vehiclenumber=vehiclenumber;
+	this.hp=hp;
+	this.vehtp=vehtp;
+	if(vehtp.equalsIgnoreCase("Bike")==true)
+		pf=10.0*hp;
+	if(vehtp.equalsIgnoreCase("Car")==true)
+		pf=30.0*hp;
+	if(vehtp.equalsIgnoreCase("Bus")==true)
+		pf=50.0*hp;
+	
+}
+void display()
+{
+	System.out.println("Parking fee="+pf);
+}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter vehicle number");
+		String v;
+		v=sc.nextLine();
+		System.out.println("Enter hours parked");
+		int a;
+		a=sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter type of vehicle");
+         String b;
+         b=sc.nextLine();
+         Vehicle ob=new Vehicle(v,a,b);
+         ob.display();
+	}
+
+}
