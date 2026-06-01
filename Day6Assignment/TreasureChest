@@ -1,0 +1,37 @@
+package com.sixthprog;
+import java.util.Scanner;
+public class TreasureChest {
+String playername;
+int coinsCollected;
+String reward;
+TreasureChest(String h,int c)
+{
+	playername=h;
+	coinsCollected=c;
+	if(coinsCollected>=1000)
+		reward="Diamond Sword";
+	else if(coinsCollected>=500)
+		reward="Gold Sword";
+	else if(coinsCollected>=100)
+		reward="Iron Sword";
+	else
+		reward="Wooden Sword";
+	
+}
+void display()
+{
+	System.out.println("Reward="+reward);
+}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter name of player");
+		String h;
+		h=sc.nextLine();
+		System.out.println("Enter coins collected by player");
+		int a;
+		a=sc.nextInt();
+		TreasureChest ob=new TreasureChest(h,a);
+         ob.display();
+	}
+
+}
